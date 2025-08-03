@@ -1,29 +1,41 @@
 // Find repeating number in array
 
+import java.util.Scanner;
+
 public class RepeatingArray {
 
-    public static int[] repeat(int a[]) {
-        boolean found = false;
-        System.out.print("The repeating number is : ");
+    static Scanner s = new Scanner(System.in);
 
-        for (int i = 0; i < a.length - 1; i++) {
+    public static void main(String[] args) {
+        System.out.print("Enter the Size of the Array : ");
+        int a[] = new int[s.nextInt()];
+        System.out.println("Enter the Array Elements :");
+        for (int i = 0; i < a.length; i++) {
+            a[i] = s.nextInt();
+        }
+        System.out.println("The repeating Elements are : ");
+        boolean found = false;
+        for (int i = 0; i < a.length; i++) {
+            boolean isPrinted = false;
+            for (int k = 0; k < i; k++) {
+                if (a[k] == a[i]) {
+                    isPrinted = true;
+                    break;
+                }
+            }
+            if (isPrinted) {
+                continue;
+            }
             for (int j = i + 1; j < a.length; j++) {
                 if (a[i] == a[j]) {
-                    System.out.print(a[i] + "  ");
+                    System.out.println(a[i]);
                     found = true;
                     break;
                 }
             }
         }
         if (!found) {
-            System.out.println("No Repeating Number");
+            System.out.println("No Repeating Elements");
         }
-        return a;
-
-    }
-
-    public static void main(String[] args) {
-        int a[] = {1, 2, 3, 4, 5, 2, 3};
-        repeat(a);
     }
 }
