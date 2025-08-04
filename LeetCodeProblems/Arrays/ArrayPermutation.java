@@ -1,3 +1,4 @@
+package Arrays;
 //1920. Build Array from Permutation
 import java.util.*;
 public class ArrayPermutation {

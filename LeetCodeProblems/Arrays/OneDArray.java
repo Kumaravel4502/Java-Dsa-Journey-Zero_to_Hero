@@ -1,3 +1,4 @@
+package Arrays;
 // Running sum of 1d array
 
 import java.util.Arrays;
