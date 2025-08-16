@@ -15,9 +15,11 @@ public class OrderAgnoisticBinary {
 
     static int orderAgnoisticBinarySearch(int[] arr, int target) {
         int start = 0;
+        
         int end = arr.length - 1;
         int mid = 0;
         boolean isAsc = arr[start] < arr[end];
+        
         while (start <= end) {
             mid = start + (end - start) / 2;
             if (arr[mid] == target) {
