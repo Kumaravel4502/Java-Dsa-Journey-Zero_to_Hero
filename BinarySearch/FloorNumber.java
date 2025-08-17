@@ -14,12 +14,10 @@ public class FloorNumber {
                 return mid;
             } else if (arr[mid] < target) {
                 ans = mid;
-                low = mid + 1;
-
+                low = mid + 1; // search right
             } else {
-                high = mid - 1;
+                high = mid - 1; // search left
             }
-
         }
         return ans;
     }
@@ -29,6 +27,11 @@ public class FloorNumber {
         System.out.println("Enter the Element to Search : ");
         int target = s.nextInt();
         int ans = floor(arr, target);
-        System.out.println("ceiling of " + target + " is : " + arr[ans] + " at index " + ans);
+
+        if (ans == -1) {
+            System.out.println("No floor exists for " + target);
+        } else {
+            System.out.println("floor of " + target + " is : " + arr[ans] + " at index " + ans);
+        }
     }
 }

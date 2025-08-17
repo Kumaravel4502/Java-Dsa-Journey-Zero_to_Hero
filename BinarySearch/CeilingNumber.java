@@ -1,5 +1,5 @@
-// smallest number greater than or equal to a given number in a sorted array
 
+// Smallest number greater than or equal to a given number in a sorted array
 import java.util.Scanner;
 
 public class CeilingNumber {
@@ -14,11 +14,10 @@ public class CeilingNumber {
                 return mid;
             } else if (arr[mid] > target) {
                 ans = mid;
-                high = mid - 1;
+                high = mid - 1;   // move left
             } else {
-                low = mid + 1;
+                low = mid + 1;    // move right
             }
-
         }
         return ans;
     }
@@ -28,6 +27,11 @@ public class CeilingNumber {
         System.out.println("Enter the Element to Search : ");
         int target = s.nextInt();
         int ans = ceiling(arr, target);
-        System.out.println("ceiling of " + target + " is : " + arr[ans] + " at index " + ans);
+
+        if (ans == -1) {
+            System.out.println("No Ceiling exists for " + target);
+        } else {
+            System.out.println("Ceiling of " + target + " is : " + arr[ans] + " at index " + ans);
+        }
     }
 }
