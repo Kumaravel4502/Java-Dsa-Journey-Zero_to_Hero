@@ -1,7 +1,7 @@
-
+// 744 . Find Smallest Letter Greater Than Target
 
 public class SmallestLetter {
-    
+
     public char nextGreatestLetter(char[] letters, char target) {
         int low = 0, high = letters.length - 1, mid = 0;
         while (low <= high) {
