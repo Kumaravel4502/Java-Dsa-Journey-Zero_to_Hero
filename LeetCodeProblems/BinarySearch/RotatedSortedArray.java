@@ -1,7 +1,9 @@
+// 33. Search in Rotated Sorted Array
+// https://leetcode.com/problems/search-in-rotated-sorted-array/
 
 import java.util.*;
 
-class Dummy {
+public class RotatedSortedArray {
 
     public static void main(String[] args) {
         int nums[] = {4, 5, 6, 7, 0, 1, 2};

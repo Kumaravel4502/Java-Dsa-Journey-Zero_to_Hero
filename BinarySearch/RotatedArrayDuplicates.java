@@ -1,11 +1,13 @@
 
 import java.util.*;
 
-class Dummy {
+public class RotatedArrayDuplicates {
 
     public static void main(String[] args) {
-        int nums[] = {4, 5, 6, 7, 0, 1, 2};
+
+        int nums[] = {1, 0, 1, 1, 1}; // Another example with duplicates
         int target = 0;
+
         int ans = search(nums, target);
         System.out.println("Position of " + target + " is: " + ans);
     }
@@ -16,7 +18,14 @@ class Dummy {
             int mid = left + (right - left) / 2;
             if (nums[mid] == target) {
                 return mid;
-            } else if (nums[mid] >= nums[left]) {
+            }
+            // Handle duplicates
+            if (nums[left] == nums[mid] && nums[mid] == nums[right]) {
+                //skip Duplicates
+                // This is necessary to avoid infinite loop in case of duplicates
+                left++;
+                right--;
+            } else if (nums[left] <= nums[mid]) {
                 if (nums[left] <= target && nums[mid] >= target) {
                     right = mid - 1;
                 } else {
