@@ -1,1 +1,1 @@
-# Curious-Freaks-DSA-Journey-JAVA
+# Java-Dsa-Journey-Zero_to_Hero
