@@ -1,8 +1,6 @@
 // WAJP to find the rotation count in a rotated sorted array
 //l 
 
-
-import java.util.*;
 public class RotationCount {
 
     public static void main(String[] args) {
