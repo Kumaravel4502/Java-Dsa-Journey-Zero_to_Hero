@@ -20,7 +20,7 @@ public class MissingNumberFinder {
         System.out.print("Missing numbers: ");
         for (int i = 0; i < a.length; i++) {
             while (j < a[i]) {
-                System.out.println(j);
+                System.out.print(j+",");
                 j++;
             }
             j++;

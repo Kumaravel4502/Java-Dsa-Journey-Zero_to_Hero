@@ -1,3 +1,4 @@
+package SelectionSort;
 
 import java.util.*;
 
@@ -9,6 +10,18 @@ class SelectionSort {
         a[last] = temp;
     }
 
+    static int getMaxIndex(int a[], int start, int end) {
+        int max = start;
+        for (int i = start; i <= end; i++) {
+            if (a[i] > a[max]) {
+                max = i;
+            }
+        }
+        return max;
+    }
+
+
+
     public static void selection(int a[]) {
         for (int i = 0; i < a.length; i++) {
             //find max item in the array and swap with correct index
@@ -19,16 +32,6 @@ class SelectionSort {
 
         }
         System.out.println(Arrays.toString(a));
-    }
-
-    static int getMaxIndex(int a[], int start, int end) {
-        int max = start;
-        for (int i = start; i <= end; i++) {
-            if (a[i] > a[max]) {
-                max = i;
-            }
-        }
-        return max;
     }
 
     public static void main(String[] args) {
