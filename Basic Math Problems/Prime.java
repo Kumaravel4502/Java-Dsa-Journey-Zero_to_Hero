@@ -7,13 +7,14 @@ public class Prime {
     static int Prime;
 
     public static int primeNum(int Prime) {
-        for (int i = 1; i < Prime; i++) {
+        int i;
+        for ( i = 1; i < Prime; i++) {
             if (Prime % i == 0 && i != 1 && i != Prime) {
-                System.out.println("Not  A Prime");
+                System.out.println(Prime+" is Not  A Prime");
                 return 0;
             }
         }
-        System.out.println("Prime Number");
+        System.out.println(Prime +" is a Prime Number");
         return Prime;
     }
 

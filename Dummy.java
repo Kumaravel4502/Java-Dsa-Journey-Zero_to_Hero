@@ -1,17 +1,27 @@
+import java.util.Arrays;
+import java.util.Scanner;
 
-// import java.util.*;
+class Dummy {
+    static Scanner s = new Scanner(System.in);
 
-// class Dummy {
+    public static void missingNum(int num[]) {
+        System.out.print("Missing Numbers : ");
+        for (int i = 0; i < num.length - 1; i++) {
+            int current = num[i];
+            int next = num[i + 1];
 
-  
+            for (int j = current + 1; j < next; j++) {
+                System.out.print(j + " ");
+            }
+        }
+        System.out.println();
 
-//     public static void main(String[] args) {
 
-//         int nums[] = {4, 5, 6, 6, 6, 8, 7, 8, 9, 0, 1, 2};
-//         int target = 6;
-//         int ans[] = search(nums, target);
-//         System.out.println("Position of " + target + " is: " + ans);
-//         System.out.println("Total number of occurences of " + target + " is: " + ans);
-//     }
+    }
 
-// }
+    public static void main(String[] args) {
+        int a[] = {1, 2, 5, 6, 8};
+        System.out.println("A : " + Arrays.toString(a));
+        missingNum(a);
+    }
+}

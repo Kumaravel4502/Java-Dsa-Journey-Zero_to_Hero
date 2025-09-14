@@ -1,5 +1,5 @@
 
-public class Palindrome {
+public class palindromes {
 
     public static void main(String[] args) {
         String str = "abcdcba";

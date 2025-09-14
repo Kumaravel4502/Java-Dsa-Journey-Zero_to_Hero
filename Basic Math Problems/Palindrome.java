@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class Palindrome {
+class Palindrome1 {
 
     static Scanner s = new Scanner(System.in);
     static int rev = 0, rem;
