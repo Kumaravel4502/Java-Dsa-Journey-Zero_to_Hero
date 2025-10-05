@@ -12,9 +12,13 @@ public class InfiniteArrayPos {
         int end = 1;
 
         //condition to find the range
-        while (arr[end] < target) {
+        while (end < arr.length && arr[end] < target) {
             int temp = end + 1;
             end = end + (end - start + 1) * 2;
+
+            if (end >= arr.length) {
+                end = arr.length - 1;
+            }
             start = temp;
         }
         return binarySearch(arr, target, start, end);

@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class ArrayListExample {
+public class ArrayListEG {
 
     static Scanner s = new Scanner(System.in);
 
