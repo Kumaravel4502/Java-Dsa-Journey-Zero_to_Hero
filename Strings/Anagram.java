@@ -2,7 +2,7 @@ package Strings;
 
 import java.util.Arrays;
 
-public class Dummy2 {
+public class Anagram {
     public static void main(String[] args) {
 
         String str1 = "Earth";
