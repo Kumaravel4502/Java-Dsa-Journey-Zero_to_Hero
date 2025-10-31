@@ -1,55 +1,63 @@
-import java.util.*;
+//class Connection {
+//    private static Connection connection;
+//
+//    private Connection() {
+//    }
+//
+//    public static Connection getConnection() {
+//        if (connection == null) {
+//            connection = new Connection();
+//        }
+//        return connection;
+//    }
+//}
+//
+//public class Dummy {
+//    public static void main(String[] args) {
+//        Connection c1 = Connection.getConnection();
+//        Connection c2 = Connection.getConnection();
+//        Connection c3 = Connection.getConnection();
+//        Connection c4 = Connection.getConnection();
+//
+//        System.out.println("c1: " + c1);  // Connection@100
+//        System.out.println("c2: " + c2);  // Connection@100
+//        System.out.println("c3: " + c3);  // Connection@100
+//        System.out.println("c4: " + c4);  // Connection@100
+//    }
+//}
 
-class Dummy {
-    public static void main(String[] args) {
-        int arr[] = {5,6,2,3,4};
-        int ans[] = mergeSort(arr);
-        System.out.println(Arrays.toString(ans));
+
+class Database {
+    private static Database data;
+
+    private Database() {
     }
 
-    static int[] mergeSort(int arr[]) {
-        if (arr.length == 1) {
-            return arr;
-        }
-        int mid = arr.length / 2;
-        int left[] = mergeSort(Arrays.copyOfRange(arr, 0, mid));
-        int right[] = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
-        return merge(left, right);
 
+    public static Database getData() {
+        if (data == null) {
+            data = new Database();
+        }
+        return data;
     }
 
-    static int[] merge(int first[], int second[]) {
-        int i = 0, k = 0, j = 0;
-        int mix[] = new int[first.length + second.length];
-        while (i < first.length && j < second.length) {
-            if (first[i] < second[j]) {
-                mix[k] = first[i];
-                i++;
-            } else {
-                mix[k] = second[j];
-                j++;
-            }
-            k++;
-        }
-
-        // Copy remaining elements from the first array
-        while (i < first.length) {
-            mix[k] = first[i];
-            i++;
-            k++;
-        }
-
-        // Copy remaining elements from the second array
-
-        while (j < second.length) {
-            mix[k] = second[j];
-            j++;
-            k++;
-        }
-
-        return mix;
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
+
+public class Dummy {
+    public static void main(String[] args) {
+        Database d1 = Database.getData();
+        Database d2 = Database.getData();
+        System.out.println("D1 : " + d1);
+        System.out.println("D2 : " + d2);
+    }
+}
+
+
+
 
 
 

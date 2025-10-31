@@ -1,16 +1,18 @@
-package OOPS.MethodReference.NonStaticMethod;
+package OOPS.MethodReference.ConstructorRef;
 
+//Syntax : ClassName :: new  --> new Keyword
 
-interface Sports{
+interface Sports {
     void play(String msg);
 }
+
 public class Cricket {
-    Cricket(String msg){
+    Cricket(String msg) {
         System.out.println(msg);
     }
 
     public static void main(String[] args) {
-        Sports s1=Cricket::new;
+        Sports s1 = Cricket::new;
         s1.play("Cricket");
     }
 }

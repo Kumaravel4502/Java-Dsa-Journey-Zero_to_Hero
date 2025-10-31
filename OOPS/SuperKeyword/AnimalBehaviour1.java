@@ -1,3 +1,5 @@
+// 1 . Accessing Parent Class constructor
+
 package OOPS.SuperKeyword;
 
 class Animal {
@@ -18,7 +20,7 @@ class Dog extends Animal {
     }
 }
 
-public class AnimalBehaviour {
+public class AnimalBehaviour1 {
     public static void main(String[] args) {
         Dog d = new Dog();//Trigger All Constructor
 

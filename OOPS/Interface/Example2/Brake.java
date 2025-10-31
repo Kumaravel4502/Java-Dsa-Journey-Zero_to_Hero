@@ -1,4 +1,5 @@
 package OOPS.Interface.Example2;
 
-public interface Break {
+public interface Brake {
+    void brake();
 }

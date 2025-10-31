@@ -1,3 +1,5 @@
+package OOPS.Abstraction;
+
 abstract class Computer {
     // I've created two abstract methods
     abstract void turnOn();
@@ -9,24 +11,24 @@ abstract class Computer {
 class HP extends Computer {
     @Override
     void turnOn() {
-        System.out.println("Turned On HP ");
+        System.out.println("Turned On OOPS.Abstraction.HP ");
     }
 
     @Override
     void turnOff() {
-        System.out.println("Turned Off HP");
+        System.out.println("Turned Off OOPS.Abstraction.HP");
     }
 }
 
 class Dell extends Computer {
     @Override
     void turnOn() {
-        System.out.println("Turned On Dell ");
+        System.out.println("Turned On OOPS.Abstraction.Dell ");
     }
 
     @Override
     void turnOff() {
-        System.out.println("Turned Off Dell");
+        System.out.println("Turned Off OOPS.Abstraction.Dell");
     }
 }
 

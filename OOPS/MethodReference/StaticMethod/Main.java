@@ -1,4 +1,4 @@
-package OOPS.MethodReference;
+package OOPS.MethodReference.StaticMethod;
 
 // 1. Reference to Static Method
 
@@ -10,7 +10,6 @@ class Demo {
     public static void print() {
         System.out.println("Display Some Data");
     }
-
 }
 
 
