@@ -1,0 +1,8 @@
+# IntelliJ / Java build output
+out/
+.build/
+target/
+*.class
+
+# Big PDFs – keep them locally, not in git
+*.pdf
