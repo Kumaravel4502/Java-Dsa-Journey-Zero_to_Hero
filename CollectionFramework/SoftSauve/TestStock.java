@@ -1,5 +1,17 @@
 package CollectionFramework.SoftSauve;
 
-public class StockOutOfBoundsException {
+class StockOutOfBoundsException extends Exception {
+    public StockOutOfBoundsException(String msg) {
+        super(msg);
+    }
 }
-StockOutOfBoundsException
+
+public class TestStock {
+    public static void main(String[] args) throws StockOutOfBoundsException {
+        int stock = 0;
+        if (stock == 0) {
+            throw new StockOutOfBoundsException("Product Out of Stock!");
+        }
+        System.out.println("Delivered Successfully");
+    }
+}
