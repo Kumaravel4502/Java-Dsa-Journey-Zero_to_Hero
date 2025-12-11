@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class PrimeSpiral {
 
     static boolean isPrime(int n) {
         if (n < 2) {
@@ -33,6 +33,7 @@ public class Main {
             }
             num++;
         }
+
 
         // Spiral print
         int top = 0;
