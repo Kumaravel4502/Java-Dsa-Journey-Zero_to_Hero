@@ -1,0 +1,4 @@
+package CollectionFramework.SoftSauve.QSP;
+
+public class Demo4Clone {
+}
